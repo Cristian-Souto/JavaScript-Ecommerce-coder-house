@@ -12,10 +12,10 @@ let producto = prompt("que producto desea comprar?");
   
 let precioProducto = parseInt(prompt("Valor del producto:"));
 
-/*valor que tiene que incrementarse a medida que vamos agregado items al carrito de compras*/
+/*valor que tiene que incrementarse o decrementar a medida que vamos agregado items al carrito de compras*/
 let totalCompra = null;
 
-/*variable para ir acumulando las productos seleccionados*/
+/*variable para ir acumulando la cantidad de productos agregados*/
 let cantidadProductos;
 
 /*en el caso que el usuario quiera seguir haciendo compras, pondria dentro de un condicional  
@@ -31,7 +31,7 @@ function calcularPrecio(producto,precio,costoEnvio){
   //mostramos el valor total de la compra con el iva y el costo de envio
    totalCompra = (totalCompra + precioProducto) + costoEnvio + precioConIva;
 
-   let compra = (`El valor de tu compra es de: ${totalCompra}`);
+   let compra = `El valor de tu compra es de: ${totalCompra}`;
    return compra;
 }
 
