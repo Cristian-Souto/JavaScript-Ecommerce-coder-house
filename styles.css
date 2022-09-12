@@ -1,0 +1,26 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family: sans-serif;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.center-title{
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 2rem;
+}
+.card{
+  background-color: blueviolet;
+  margin: 1rem;
+  padding: 2rem;
+  border-radius: 4px;
+  max-width: 20em;
+  color: antiquewhite;
+}
