@@ -1,12 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="./css/styles.css" /> 
+  <link rel="stylesheet" href="./css/styles.css" />
   <link rel="shortcut icon" href="img/carrito.png" type="image/x-icon">
+  <!-- Agregar el enlace al archivo CSS de Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+    integrity="sha384-Kcy9pE6DgB+xR1K6zlyOg+iWU6nDjJl/uU6O7+Xk9FKjK1rF5ZgykPTMOh8jUkCl" crossorigin="anonymous">
+
   <!--Bootstraps-->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
@@ -21,19 +25,33 @@
 
 <body>
   <header>
-    <h2 class="logo">Productos</h2>
-    <nav class="nav-bar">
-      <ul class="list-items">
-        <li class="link-items">Home</li>
-        <li class="link-items">About</li>
-        <li class="link-items">Products</li>
-        <li class="nav-item">
-          <button class="nav-link text-body btn-success" id="open" href="#"><i class="fa-solid fa-cart-shopping"></i>
-            <span id="contador-carrito">0</span> </a>
-        </li>
-      </ul>
+    <nav class="navbar navbar-expand-md navbar-light bg-dark">
+      <a class="navbar-brand">ProMusica</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a href="#" class="nav-link h6 text-light">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link h6 text-light" href="#">Acerca de nosotros</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link h6 text-light" href="#">Productos</a>
+          </li>
+          <li>
+            <button class="text-body btn btn-outline-success my-2 my-sm-0" id="open" href="#"><i
+                class="fa-solid fa-cart-shopping"></i>
+              <span id="contador-carrito">0</span> </a>
+          </li>
+        </ul>
+      </div>
     </nav>
   </header>
+
   <!--Seccion compras-->
   <main id="product-container" class="container-main">
     <!--Modal-->
@@ -48,12 +66,44 @@
     </div>
   </main>
   <!--Footer-->
-  <footer class="footer-content">
-    <div class="copyright">
-      <p>Copyright 2022</p>
+  <footer class="footer bg-dark text-white">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <h5>Mi sitio web</h5>
+          <p>Descripción del sitio web.</p>
+        </div>
+        <div class="col-md-4">
+          <h5>Redes Sociales</h5>
+          <ul class="list-inline">
+            <li class="list-inline-item"><a href="#"><i class="fab fa-facebook"></i>
+            </a></li>
+            <li class="list-inline-item"><a href="#"><i class="fab fa-twitter"></i>
+            </a></li>
+            <li class="list-inline-item"><a href="#"><i class="fab fa-instagram"></i>
+            </a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h5>Contacto</h5>
+          <address>
+            <p>Dirección</p>
+            <p>Ciudad, Estado, País</p>
+            <p>Teléfono: 123-456-7890</p>
+            <p>Email: info@misitioweb.com</p>
+          </address>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <p>&copy; 2023 Mi sitio web. Todos los derechos reservados.</p>
+        </div>
+      </div>
     </div>
   </footer>
-  <!--Scripts-->  
+
+
+  <!--Scripts-->
   <script src="./main.js"></script>
   <script src="./modal.js"></script>
 </body>

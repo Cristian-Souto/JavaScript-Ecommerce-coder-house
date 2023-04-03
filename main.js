@@ -8,11 +8,11 @@ let cantidad;
 //seleccionamos el contenedor main donde pintamos las cards. 
 const contenedorProductos = document.getElementById("product-container");
 
-//pedir los productos por fetch 
+//pedir los productos con fetch 
   const getData = async () => {
     let respuesta = await fetch('./stock.json');
     let data = await respuesta.json();
-    console.log(data);
+
     data.forEach(producto => {
       const div = document.createElement("div");
       div.classList.add(".card")
@@ -57,8 +57,8 @@ const contenedorProductos = document.getElementById("product-container");
             //Una vez obtenida la ID, lo que haremos es hacerle un push para agregarlo al carrito
             carritoCompras.push(item)
           }
-          //Va a buscar el item, agregarlo al carrito y llama a la funcion actualizarCarrito, que recorre
-          //el carrito y se ve.
+          //Va a buscar el item, agregarlo al carrito, luego llama a la funcion actualizarCarrito, que recorre
+          //el carrito.
           actualizarCarrito() //LLAMAMOS A LA FUNCION CADA VEZ Q SE MODIFICA EL CARRITO
         }
         agregarProducto(producto);
