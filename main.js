@@ -20,20 +20,20 @@ const contenedorProductos = document.getElementById("product-container");
                                <img src="${producto.img}"class="card-img-top" alt="...">
                               <div class="card-body">
                                 <h5 class="card-title">${producto.nombre}</h5>
-                                <p class="card-text">Descripción:${producto.descripcion}</p>
-                                <p class="card-text">Precio:$ ${producto.precio}</p>
-                                <button class="btn btn-primary" id=boton${producto.id}>Comprar</button>
+                                <p class="card-text"><strong>Descripción:</strong> ${producto.descripcion}</p>
+                                <p class="card-text text-muted">Precio:$ ${producto.precio}</p>
+                                <button class="btn btn-primary" id=boton${producto.id}>Agregar al carrito</button>
                               </div>
                             </div>`
       contenedorProductos.appendChild(div);
       //selecciona el boton de cada producto atraves de su id
       const boton = document.getElementById(`boton${producto.id}`)
-  
+      
       boton.addEventListener("click", () => {
         Swal.fire({
           position: 'center',
           icon: 'success',
-          title: `El producto ${producto.nombre} fue agregado`,
+          text: 'Producto agregado al carrito',
           showConfirmButton: false,
           timer: 2000
         })
@@ -41,7 +41,7 @@ const contenedorProductos = document.getElementById("product-container");
         //agregamos el producto atraves de su id
         const agregarProducto = (prodId) => {
           //verifico si el producto ya existe, si es asi aumento la cantidad 
-          //PARA AUMENTAR LA CANTIDAD Y QUE NO SE REPITA
+          //PARA AUMENTAR LA CANTIDAD Y QUE NO SE REPITA. Metodo some devuelve TRUE o FALSE
           const existe = carritoCompras.some(prod => prod === prodId) //comprobar si el elemento ya existe en el carro
           
           if (existe) { //SI YA ESTÁ EN EL CARRITO, ACTUALIZAMOS LA CANTIDAD

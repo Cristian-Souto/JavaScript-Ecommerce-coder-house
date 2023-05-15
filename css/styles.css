@@ -64,7 +64,7 @@ ul{
 }
 
 span {
-  color: #fff;
+  color: #000;
   font-weight: 600;
 }
 i{
@@ -73,9 +73,7 @@ i{
 footer{
  padding: 1rem;
 }
-footer p{
-  margin-bottom: 0;
-}
+
 .container-main {
   display: grid;
   margin: 90px auto;
@@ -131,11 +129,11 @@ p{
 .btnVaciar:hover{
   opacity:.9;
 }
-/*div carrito de compras*/
+/*div para carrito de compras*/
 .productoEnCarrito {
   background-color: #0d6efd;
   color: aliceblue;
-  border-left: 5px solid lightblue;
+  border-left: 5px solid rgb(31, 178, 227);
   border-bottom-left-radius: 3px;
   border-top-left-radius: 3px;
   margin: 5px 0;
